@@ -1,0 +1,364 @@
+                 html {
+                 scroll-behavior: smooth;
+             }
+             
+             * {
+                 box-sizing: border-box;
+                 margin: 0px;
+                 padding: 0px;
+             }
+             
+             body {
+                 background: #0e0f10;
+                 color: white;
+                 font-family: 'Open Sans', sans-serif;
+                 font-family: 'Poppins', sans-serif;
+             }
+             
+             .container {
+                 width: 100%;
+                 display: flex;
+             }
+             
+             .content {
+                 height: 100%;
+                 width: 100%;
+                 vertical-align: top;
+                 max-width: 1200px;
+                 margin-left: auto;
+                 margin-right: auto;
+                 padding-left: 10%;
+             }
+             
+             .title {
+                 margin-top: 50px;
+                 margin-bottom: 50px;
+                 text-align: center;
+             }
+             
+             .flexbox {
+                 display: flex;
+                 gap: 30px;
+             }
+             
+             .flexbox-item {
+                 width: 50%;
+             }
+             
+             #aboutMeSection,
+             #resumeSection,
+             #contactSection {
+                 scroll-margin-top: 50px;
+                 margin-left: 30px;
+                 margin-right: 30px;
+             }
+             
+             .padding-top-60 {
+                 padding-top: 60px !important;
+             }
+             /* Menu Section Init */
+             
+             .menu {
+                 background-color: red;
+                 height: 100%;
+                 width: 10%;
+                 background: #1D1D22;
+                 padding: 20px;
+                 vertical-align: top;
+                 text-align: center;
+                 position: fixed;
+             }
+             
+             .menu p {
+                 margin-bottom: 30px;
+             }
+             
+             .menu a {
+                 color: white;
+                 text-decoration: none;
+             }
+             
+             .menu a i {
+                 font-size: 30px;
+             }
+             
+             .menu a:hover {
+                 color: #25ca7f;
+             }
+             
+             .menu .logo {
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 border-bottom: 2px solid #25ca7f;
+                 margin-bottom: 50px;
+             }
+             /* Menu Section End */
+             /* Fill Animation Section Init*/
+             
+             h2.fill-animation {
+                 position: relative;
+                 color: #252839;
+                 -webkit-text-stroke: 1px white;
+                 text-transform: uppercase;
+                 font-size: 60px;
+             }
+             
+             h2.fill-animation::before {
+                 content: attr(data-text);
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 width: 0;
+                 height: 100%;
+                 color: #01fe87;
+                 -webkit-text-stroke: 0vw #383d52;
+                 overflow: hidden;
+                 animation: animate 6s linear forwards;
+             }
+             
+             @keyframes animate {
+                 0%,
+                 10%,
+                 {
+                     width: 0;
+                 }
+                 70%,
+                 90%,
+                 100% {
+                     width: 100%;
+                 }
+             }
+             /* Fill Animation Section End*/
+             /* CardBox Section Init*/
+             
+             .card {
+                 background: #070708;
+                 padding: 30px;
+                 border-radius: 8px;
+             }
+             
+             .card-box {
+                 display: flex;
+             }
+             
+             .card-box-img img {
+                 height: 200px;
+                 border-radius: 50%
+             }
+             
+             .card-box-body {
+                 margin-left: 20px;
+             }
+             
+             .card-box-body-location {
+                 color: #25ca7f;
+                 font-weight: 300;
+                 padding: 5px;
+                 font-size: 14px;
+             }
+             
+             .card-box-body-location i {
+                 padding-right: 5px;
+             }
+             
+             .card-box-body-information {
+                 font-size: 15px;
+             }
+             /* CardBox Section End */
+             /* Service Section Init */
+             
+             .service-container {
+                 display: flex;
+                 flex-wrap: wrap;
+             }
+             
+             .service-container .service-item {
+                 width: calc(33.33% - 32px);
+                 /*margin-bottom: 16px; */
+                 margin: 16px;
+             }
+             
+             .service-container .service-item .service-item-card {
+                 border: 1px solid black;
+                 height: 360px;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 text-align: center;
+             }
+             
+             .service-container .service-item .service-item-card:hover {
+                 border: 1px solid #25ca7f;
+             }
+             
+             .service-container .service-item .service-item-card .service-item-card-icon {
+                 background-color: #0e0f10;
+                 height: 80px;
+                 border: 1px solid black;
+                 width: 80px;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+             }
+             
+             .service-container .service-item .service-item-card .service-item-card-icon:hover {
+                 border: 1px solid #25ca7f;
+             }
+             
+             .service-container .service-item .service-item-card .service-item-card-icon i {
+                 font-size: 30px;
+             }
+             
+             .service-container .service-item .service-item-card .service-item-card-title {
+                 margin-top: 16px;
+                 margin-bottom: 16px;
+             }
+             
+             .service-container .service-item .service-item-card .service-item-card-description {
+                 text-align: center;
+             }
+             /* Service Section End */
+             /* TimeLine Section Init */
+             
+             .timeline-item {
+                 padding-bottom: 30px;
+                 border-left: 1px solid #25ca7f;
+                 padding: 32px;
+                 position: relative;
+             }
+             
+             .timeline-item-period {
+                 font-size: 12px;
+                 color: #25ca7f;
+                 margin-top: 8px;
+                 margin-bottom: 8px;
+             }
+             
+             .timeline-item-marker {
+                 display: flex;
+                 align-items: center;
+                 position: absolute;
+                 top: 40px;
+                 left: -8px;
+             }
+             
+             .timeline-item-marker-circle {
+                 height: 15px;
+                 width: 15px;
+                 border-radius: 50%;
+                 background: #25ca7f;
+             }
+             
+             .timeline-item-marker-line {
+                 height: 1;
+                 width: 15px;
+                 background: #25ca7f;
+             }
+             /* TimeLine Section End */
+             /* Progress Bar Section Init*/
+             
+             .progress-bar {
+                 background-color: #0e0f10;
+                 height: 8px;
+                 border-radius: 8px;
+                 position: relative;
+                 margin-bottom: 60px;
+             }
+             
+             .progress-bar-done {
+                 background: #25ca7f;
+                 height: 100%;
+                 border-radius: 8px;
+                 position: relative;
+             }
+             
+             .progress-bar-title {
+                 position: absolute;
+                 top: -30px;
+             }
+             
+             .progress-bar-done-text {
+                 position: absolute;
+                 top: -30px;
+                 right: 0px;
+             }
+             
+             .progress-bar-done-check {
+                 height: 20px;
+                 width: 20px;
+                 border: 4px solid #25ca7f;
+                 border-radius: 50%;
+                 position: absolute;
+                 right: 0px;
+                 top: -6px;
+                 background-color: #0e0f10;
+             }
+             /* Progress Bar Section End*/
+             /* Contact Item Section Init*/
+             
+             .contact-item {
+                 text-align: center;
+                 flex-direction: column;
+                 width: 30%;
+                 align-items: center;
+                 gap: 20px;
+             }
+             
+             .contact-item-icon {
+                 font-size: 40px;
+                 border: 1px solid #25ca7f;
+                 width: 80px;
+                 height: 80px;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+             }
+             /* Contact Item Section End*/
+             
+             @media only screen and (max-width: 970px) {
+                 .menu {
+                     display: none;
+                 }
+             }
+             
+             @media only screen and (max-width: 770px) {
+                 .content {
+                     padding-left: 0px;
+                 }
+                 .card-box {
+                     flex-direction: column;
+                     align-items: center;
+                 }
+                 .card-box-body {
+                     margin-top: 16px;
+                 }
+                 .card-box-body p {
+                     margin-top: 8px;
+                     line-height: 40px;
+                 }
+                 .service-container .service-item {
+                     width: calc(50% - 32px);
+                 }
+                 .service-container .service-item .service-item-card {
+                     min-height: 300px;
+                     justify-content: center;
+                 }
+                 .flexbox {
+                     flex-direction: column;
+                 }
+                 .flexbox-item {
+                     width: 100%;
+                 }
+                 #contactSection .flexbox {
+                     align-items: center;
+                 }
+                 @media only screen and (max-width: 600px) {
+                     .service-container .service-item {
+                         width: 100%;
+                         margin: 0px;
+                         margin-bottom: 16px;
+                     }
+                 }

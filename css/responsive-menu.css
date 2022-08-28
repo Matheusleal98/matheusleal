@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    background: #1d1d22;
+    display: none;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    background: #1d1d22;
+    z-index: 1;
+}
+
+header label .site-name {
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+header label:hover {
+    cursor: pointer;
+}
+
+.responsive-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.responsive-menu a {
+    border-right: 1px solid #0e0f10;
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.responsive-menu a:last-child {
+    border-right: none;
+}
+
+.responsive-menu a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0;
+}
+
+.responsive-menu a:hover>.dropdown {
+    display: inline-block;
+}
+
+@media (max-width: 970px) {
+    header {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        display: block;
+    }
+    header label {
+        display: flex;
+    }
+    .responsive-menu {
+        position: fixed;
+        background: #1d1d22;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        top: 56px;
+        z-index: 1;
+    }
+    nav a {
+        display: block;
+        border-top: 1px solid #0e0f10;
+    }
+    #btn-menu:checked~.responsive-menu {
+        margin: 0;
+    }
+    .container {
+        margin-top: 57px;
+    }
+}
